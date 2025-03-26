@@ -20,5 +20,5 @@ def get_recommendations(user_id: int, top_k: int = 5):
 
 @app.post("/retrain")
 def retrain():
-    engine.train()
+    engine.train("retrain")
     return {"message": "Retraining triggered"}
